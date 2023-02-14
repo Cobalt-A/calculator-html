@@ -19,272 +19,269 @@
     position: relative
 
 
-.calculator
-    color: #111111
-    width: 100%
-    padding: 64px 0
-
-.calculator__title
-    font-size: 54px
-    font-family: Nekst-Black
-    max-width: 753px
-    margin-bottom: 32px
+    .calculator
+        color: #111111
+        width: 100%
+        padding: 64px 0
 
 
-.calculator-form
-    width: 100%
+    .calculator-form
+        width: 100%
 
-.calculator-form__column
-    width: 100%
-    padding: 0 32px
-    position: relative
+    .calculator__title
+        font-size: 54px
+        font-family: Nekst-Black
+        max-width: 753px
+        margin-bottom: 32px
 
-.calculator-form__title
-    font-family: 'Gilroy'
-    font-style: normal
-    font-weight: 400
-    font-size: 16px
-    line-height: 20px
-    color: #575757
-    margin: 0
-    padding: 0
-    margin-bottom: 24px
+    .row
+        position: relative
+        margin: 0
+        margin-right: -32px
+        margin-left: -32px
+        margin-bottom: 51px
+        display: flex
 
-.range__input
-    -webkit-appearance: none
-    width: calc(100% - 48px)
-    height: 2px
-    background: #FF9514
-    outline: none
-    -webkit-transition: .2s
-    transition: opacity .2s
-    position: absolute
-    bottom: 0
-    left: 24px
+    .calculator-form__column
+        width: 100%
+        padding: 0 32px
+        position: relative
+
+    .calculator-form__title
+        font-family: 'Gilroy'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        color: #575757
+        margin: 0
+        padding: 0
+        margin-bottom: 24px
+
+    .range
+        position: relative
+        display: flex
+        align-items: center
+        width: 100%
+
+    .range__input 
+        margin: auto
+        outline: none
+        padding: 0
+        width: calc( 100% - 48px )
+        height: 2px
+        background-color: #dedede
+        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #FF9514), color-stop(100%, #FF9514))
+        background-size: 50% 100%
+        background-repeat: no-repeat
+        border-radius: 10px
+        cursor: pointer
+        -webkit-appearance: none
+        position: absolute
+        bottom: 0
+        left: 24px
 
 
-.range__input::-webkit-slider-thumb 
-    -webkit-appearance: none
-    appearance: none
-    width: 20px
-    height: 20px
-    background: #FF9514
-    cursor: pointer
-    border-radius: 100%
-
-.range__input::-moz-range-thumb 
-    width: 20px
-    height: 20px
-    background: #FF9514
-    cursor: pointer
-    border-radius: 100%
-
-
-.range-content
-    display: flex
-    justify-content: space-between
-    align-items: center
-    width: 100%
-
-.range
-    position: relative
-    height: 68px
-    display: flex
-    align-items: center
-    width: 100%
-    
-.range-content__number
-    background: none
-    border: none
-    margin: 0
-    font-family: 'Nekst-Black'
-    font-style: normal
-    font-weight: 900
-    font-size: 30px
-    line-height: 36px
-    color: #575757
-    width: 100%
-    border: 1px solid #575757
-    padding-right: 64px
-    padding-left: 24px
-    border-radius: 16px
-    background-color: #F3F3F4
-    border: 1px solid #F3F3F4
-    height: 68px
-    transition: .3s
-    padding-top: 7px
-
-.range-content__number:active
-    background: #fff
-
-.range-content__number:focus
-    background: #fff
-
-.range-content__number:disabled,
-.range-content__number:disabled + .range-content__label,
-.range__input:disabled
-    opacity: 0.4
+    .range__input::-webkit-slider-runnable-track 
+        box-shadow: none
+        border: none
+        background: transparent
+        -webkit-appearance: none
 
 
 
+    .range__input::-webkit-slider-thumb 
+        -webkit-appearance: none
+        appearance: none
+        width: 20px
+        height: 20px
+        background: #FF9514
+        cursor: pointer
+        border-radius: 100%
+        
+    .range__number
+        background: none
+        border: none
+        margin: 0
+        font-family: 'Nekst-Black'
+        font-style: normal
+        font-weight: 900
+        font-size: 30px
+        line-height: 36px
+        color: #575757
+        width: 100%
+        border: 1px solid #575757
+        padding-right: 64px
+        padding-left: 24px
+        border-radius: 16px
+        background-color: #F3F3F4
+        border: 1px solid #F3F3F4
+        height: 68px
+        transition: .3s
+        padding-top: 7px
 
-.range-content__number::-webkit-outer-spin-button,
-.range-content__number::-webkit-inner-spin-button
-    -webkit-appearance: none
-    
-.range-content__label
-    font-size: 30px
-    line-height: 36px
-    color: #575757
-    position: absolute
-    right: 24px
-    padding-top: 7px
+    .range__number:active
+        background: #fff
 
-.range-content__icon-rub
-    font-size: 30px
-    line-height: 36px
-    color: #575757
-    margin-right: 24px
+    .range__number:focus
+        background: #fff
 
-
-.row
-    position: relative
-    margin: 0
-    margin-right: -32px
-    margin-left: -32px
-    margin-bottom: 51px
-    display: flex
-
-
-.row:last-child
-    margin-bottom: 0
-
-.range-content__label-percent
-    min-width: 69px
-    height: 54px
-    background: #EBEBEC
-    border-radius: 16px
-    display: flex
-    align-items: center
-    justify-content: center
-    font-family: 'Nekst-Black'
-    font-style: normal
-    font-weight: 900
-    font-size: 20px
-    line-height: 120%
-    color: #575757
-    position: absolute
-    right: 7px
-    padding-top: 0
-
-.range-content__label-percent:after
-    content: '%'
-
-
-.range-content__label-time
-    font-family: 'Nekst-Black'
-    font-style: normal
-    font-weight: 900
-    font-size: 30px
-    line-height: 36px
-    text-align: right
-    color: #575757
-    position: absolute
-    right: 24px
-
-
-.calculator-form__sum
-    font-family: 'Nekst-Black'
-    font-style: normal
-    font-weight: 900
-    font-size: 54px
-    line-height: 90%
-    color: #333333
-    padding: 0
-    margin: 0
-
-.calculator-form__sum:after
-    content: ' ₽'
-
-
-.calculator-form__button
-    height: 68px
-    background: #FF9514
-    border-radius: 40px
-    width: 100%
-    color: #fff
-    border: none
-    font-family: 'Nekst-Black'
-    font-style: normal
-    font-weight: 900
-    font-size: 30px
-    line-height: 36px
-    color: #FFFFFF
-    transition: .3s
-
-.calculator-form__button:hover
-    background: #111111
-
-.calculator-form__button:presed
-    background: #575757
-
-.calculator-form__button:disabled
-    background: #ff9514a9
-
-
-.calculator-form__column-end
-    display: flex
-    flex-direction: column-reverse
-
-
-.calculator-form__loader 
-    animation: calculator-form__loader 1.2s linear infinite
-
-@keyframes calculator-form__loader 
-  0%
-    transform: rotate(0deg)
-  100% 
-    transform: rotate(360deg)
+    .range__number:disabled,
+    .range__number:disabled + .range__label,
+    .range__input:disabled
+        opacity: 0.4
 
 
 
-.hide
-    display: none
+
+    .range__number::-webkit-outer-spin-button,
+    .range__number::-webkit-inner-spin-button
+        -webkit-appearance: none
+        
+    .range__label
+        font-size: 30px
+        line-height: 36px
+        color: #575757
+        position: absolute
+        right: 24px
+        padding-top: 7px
+
+    .range__label-rub
+        font-size: 30px
+        line-height: 36px
+        color: #575757
+        font-family: 'Nekst-Black'
+        font-weight: 900
+        padding-top: 2px
+
+
+    .row:last-child
+        margin-bottom: 0
+
+    .range__label-percent
+        min-width: 69px
+        height: 54px
+        background: #EBEBEC
+        border-radius: 16px
+        display: flex
+        align-items: center
+        justify-content: center
+        font-family: 'Nekst-Black'
+        font-style: normal
+        font-weight: 900
+        font-size: 20px
+        line-height: 120%
+        color: #575757
+        position: absolute
+        right: 7px
+        padding-top: 0
+
+    .range__label-percent:after
+        content: '%'
+
+
+    .range__label-time
+        font-family: 'Nekst-Black'
+        font-style: normal
+        font-weight: 900
+        font-size: 30px
+        line-height: 36px
+        text-align: right
+        color: #575757
+        position: absolute
+        right: 24px
+
+
+    .calculator-form__sum
+        font-family: 'Nekst-Black'
+        font-style: normal
+        font-weight: 900
+        font-size: 54px
+        line-height: 90%
+        color: #333333
+        padding: 0
+        margin: 0
+
+    .calculator-form__sum:after
+        content: ' ₽'
+
+
+    .calculator-form__button
+        height: 68px
+        background: #FF9514
+        border-radius: 40px
+        width: 100%
+        color: #fff
+        border: none
+        font-family: 'Nekst-Black'
+        font-style: normal
+        font-weight: 900
+        font-size: 30px
+        line-height: 36px
+        color: #FFFFFF
+        transition: .3s
+
+    .calculator-form__button:hover
+        background: #111111
+
+    .calculator-form__button:presed
+        background: #575757
+
+    .calculator-form__button:disabled
+        background: #ff9514a9
+
+
+    .calculator-form__column-end
+        display: flex
+        flex-direction: column-reverse
+
+
+    .calculator-form__loader 
+        animation: calculator-form__loader 1.2s linear infinite
+
+    @keyframes calculator-form__loader 
+        0%
+            transform: rotate(0deg)
+        100% 
+            transform: rotate(360deg)
+
+    .hide
+        display: none
 
 
 
 
 @media (max-width: 1120px)
-    .row
-        flex-direction: column
-        margin-top: 44px
-        margin-bottom: 0
-
-    .row:last-child
-        flex-wrap: wrap
-        flex-direction: row
-
     #app-section
         padding-right: 36px
         padding-left: 36px
 
-    .calculator__title
+    #app-section .row
+        flex-direction: column
+        margin-top: 44px
         margin-bottom: 0
 
-    .calculator-form__column
+    #app-section .row:last-child
+        flex-wrap: wrap
+        flex-direction: row
+
+    #app-section .calculator__title
+        margin-bottom: 0
+
+    #app-section .calculator-form__column
         margin-bottom: 39px
 
-    .calculator-form__column:last-child
+    #app-section .calculator-form__column:last-child
         margin-bottom: 0
 
-    .calculator-form__column-half
+    #app-section .calculator-form__column-half
         width: 50%
         margin-bottom: 44px
 
-    .calculator-form__title
+    #app-section .calculator-form__title
         margin-bottom: 8px
     
-    .range
+    #app-section .range
         margin-top: 24px
 
 
@@ -294,43 +291,46 @@
         padding-right: 21px
         padding-left: 21px
 
-    .calculator__title
+    #app-section .calculator__title
         font-size: 34px
 
-    .row
+    #app-section .row
         flex-direction: column
         margin-top: 32px
 
-    .row:last-child
+    #app-section .row:last-child
         margin-top: 25px
 
-    .calculator-form__title
+    #app-section .calculator-form__title
         font-size: 16px
 
-    .range-content__number,
-    .calculator-form__sum,
-    .calculator-form__button,
-    .range-content__time,
-    .range-content__icon-rub
+    #app-section .range__number,
+    #app-section .calculator-form__sum,
+    #app-section .calculator-form__button,
+    #app-section .range__label
         font-size: 22px
 
-    .range
+    #app-section .range
         margin-top: 8px
 
-    .calculator-form__title
+    #app-section .calculator-form__title
         margin-bottom: 2px
 
-    .range,
-    .calculator-form__button
+    #app-section .range__number,
+    #app-section .calculator-form__button
         height: 60px
 
-    .calculator-form__column-half
+    #app-section .range__label-percent
+        height: 48px
+        right: 6px
+
+    #app-section .calculator-form__column-half
         width: 100%
         margin-bottom: 29px
 
-    .calculator
+    #app-section .calculator
         padding-top: 44px
         padding-bottom: 44px
 
-    .calculator-form__button
+    #app-section .calculator-form__button
         margin-top: 3px
