@@ -1,4 +1,4 @@
-For instalation packets run: 'npm i'
+For instalation packages run: 'npm i'
 
 For running app in localhost:3000: 'npm run start'
 
