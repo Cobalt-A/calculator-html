@@ -39,7 +39,6 @@
     padding: 0 32px
     position: relative
 
-
 .calculator-form__title
     font-family: 'Gilroy'
     font-style: normal
@@ -57,16 +56,11 @@
     height: 2px
     background: #FF9514
     outline: none
-    opacity: 0.7
     -webkit-transition: .2s
     transition: opacity .2s
     position: absolute
     bottom: 0
     left: 24px
-
-
-.range__input:hover 
-    opacity: 1
 
 
 .range__input::-webkit-slider-thumb 
@@ -86,24 +80,22 @@
     border-radius: 100%
 
 
-.range
-    background: #F3F3F4
-    border-radius: 16px
-    position: relative
-    height: 68px
-    display: flex
-    align-items: center
-    width: 100%
-    
-
-
 .range-content
     display: flex
     justify-content: space-between
     align-items: center
     width: 100%
 
-.range-content__value
+.range
+    position: relative
+    height: 68px
+    display: flex
+    align-items: center
+    width: 100%
+    
+.range-content__number
+    background: none
+    border: none
     margin: 0
     font-family: 'Nekst-Black'
     font-style: normal
@@ -111,7 +103,42 @@
     font-size: 30px
     line-height: 36px
     color: #575757
-    margin-left: 24px
+    width: 100%
+    border: 1px solid #575757
+    padding-right: 64px
+    padding-left: 24px
+    border-radius: 16px
+    background-color: #F3F3F4
+    border: 1px solid #F3F3F4
+    height: 68px
+    transition: .3s
+    padding-top: 7px
+
+.range-content__number:active
+    background: #fff
+
+.range-content__number:focus
+    background: #fff
+
+.range-content__number:disabled,
+.range-content__number:disabled + .range-content__label,
+.range__input:disabled
+    opacity: 0.4
+
+
+
+
+.range-content__number::-webkit-outer-spin-button,
+.range-content__number::-webkit-inner-spin-button
+    -webkit-appearance: none
+    
+.range-content__label
+    font-size: 30px
+    line-height: 36px
+    color: #575757
+    position: absolute
+    right: 24px
+    padding-top: 7px
 
 .range-content__icon-rub
     font-size: 30px
@@ -132,8 +159,8 @@
 .row:last-child
     margin-bottom: 0
 
-.range-content__percent
-    width: 69px
+.range-content__label-percent
+    min-width: 69px
     height: 54px
     background: #EBEBEC
     border-radius: 16px
@@ -146,11 +173,15 @@
     font-size: 20px
     line-height: 120%
     color: #575757
-    margin-right: 7px
+    position: absolute
+    right: 7px
+    padding-top: 0
+
+.range-content__label-percent:after
+    content: '%'
 
 
-
-.range-content__time
+.range-content__label-time
     font-family: 'Nekst-Black'
     font-style: normal
     font-weight: 900
@@ -158,10 +189,11 @@
     line-height: 36px
     text-align: right
     color: #575757
-    margin-right: 24px
+    position: absolute
+    right: 24px
 
 
-.calculator-form__summ
+.calculator-form__sum
     font-family: 'Nekst-Black'
     font-style: normal
     font-weight: 900
@@ -170,6 +202,9 @@
     color: #333333
     padding: 0
     margin: 0
+
+.calculator-form__sum:after
+    content: ' ₽'
 
 
 .calculator-form__button
@@ -185,12 +220,36 @@
     font-size: 30px
     line-height: 36px
     color: #FFFFFF
+    transition: .3s
+
+.calculator-form__button:hover
+    background: #111111
+
+.calculator-form__button:presed
+    background: #575757
+
+.calculator-form__button:disabled
+    background: #ff9514a9
 
 
 .calculator-form__column-end
     display: flex
     flex-direction: column-reverse
 
+
+.calculator-form__loader 
+    animation: calculator-form__loader 1.2s linear infinite
+
+@keyframes calculator-form__loader 
+  0%
+    transform: rotate(0deg)
+  100% 
+    transform: rotate(360deg)
+
+
+
+.hide
+    display: none
 
 
 
@@ -248,8 +307,8 @@
     .calculator-form__title
         font-size: 16px
 
-    .range-content__value,
-    .calculator-form__summ,
+    .range-content__number,
+    .calculator-form__sum,
     .calculator-form__button,
     .range-content__time,
     .range-content__icon-rub
